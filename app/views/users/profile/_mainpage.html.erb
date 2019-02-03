@@ -1,0 +1,36 @@
+<% if params[:page].present? %>
+	<% if params[:page] == "stories" %>
+		<h3><strong>Published</strong></h3>
+		<% if @published.present? %>
+			<div class='row'>
+				<%= render @published %>
+			</div>
+		<% else %>
+			<h6 class='text-muted'>
+				No published stories yet. Submit one from the <%= link_to "Homepage", root_path %>
+			</h6>
+		<% end %>
+	<% elsif params[:page] == "settings" %>
+		<h3><strong>Settings</strong></h3>
+			<%= link_to "Edit Account Info", edit_user_registration_path(current_user), class: 'btn btn-special form-control' %>
+	<% elsif params[:page] == "admin" %>
+		<% if Admin.where(user_id: current_user.id).present? %>
+			<h3><strong>Admin</strong></h3>
+			<%= render @reports %>
+		<% end %>
+	<% else %>
+		<h3><strong>Error</strong></h3>
+		<p>The page you've requested does not exist.</p>
+	<% end %>
+<% else %>
+	<h3><strong>Drafts</strong></h3>
+	<% if @drafts.present? %>
+			<div class='row'>
+				<%= render @drafts %>
+			</div>
+		<% else %>
+			<h6 class='text-muted'>
+				No saved drafts yet. Submit one from the <%= link_to "Homepage", root_path %>
+			</h6>
+		<% end %>
+<% end %>

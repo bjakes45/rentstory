@@ -1,0 +1,19 @@
+<% if user_signed_in? %>
+	<!-- Collect the nav links, forms, and other content for toggling -->
+	<div class="collapse navbar-collapse navbar-right" id="links">
+	  <ul class="nav navbar-nav ">
+	    <li ><%= link_to current_user.email, profile_path %></li>
+	    <li ><%= link_to 'Logout', destroy_user_session_path, :method => :delete %></li>
+	  </ul>
+	</div><!-- navbar-collapse -->
+<% else %>
+	
+	<!-- Collect the nav links, forms, and other content for toggling -->
+	<div class="collapse navbar-collapse navbar-right" id="links">
+	  <ul class="nav navbar-nav ">
+	    <li ><%= link_to 'Login', new_user_session_path %></li>
+	    <li ><%= link_to 'Signup', new_user_registration_path %></li>
+	  </ul>
+	</div><!-- navbar-collapse -->
+
+<% end %>

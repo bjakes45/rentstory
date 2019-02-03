@@ -1,0 +1,11 @@
+<div class='col-sm-4'>
+	  <div class="card" style="width: 100%;">
+		  <div class="card-body">
+		    <h5 class="card-title"><strong><%= post.title.truncate(20) %></strong></h5>
+		    <h6 class="card-text text-muted text-right"><%= post.topic.name %></h6>
+		    <div class='text-center btn-margin'>
+			    <%= link_to('Full Story', post_path(post.id), class: "btn btn-dark") %> 
+		    </div>
+		  </div>
+	  </div>
+</div>

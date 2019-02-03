@@ -1,0 +1,36 @@
+<div class=<%= background_picker %> >
+    <%= render 'layouts/alerts' %>
+	<div class='container'>
+
+		<div class='row'>
+			<div class='col-sm-3 text-center'>
+				<div id='sidebar' class='card'>
+					<%= render 'posts/index/sidebar' %>
+				</div>
+			</div>
+			<div class='col-sm-9'>
+				<div id='mainpage'>
+					<%= render 'posts/index/mainpage' %>
+				</div>
+			</div>
+		</div>
+
+      <div class='card'>
+        <div class='row'>
+          <div class='col-sm-4'>
+            <%= image_tag('logo') %>
+          </div>
+          <div class='col-sm-8 text-right root_footer_right'>
+          	<p>Our struggle opposes colonial and patriarchical systems of oppression.</p>
+            <p>We organize on the stolen territory of the səl̓ílwətaʔɬ/Selilwitulh (Tsleil-Waututh), Skwxwú7mesh Úxwumixw (Squamish), Stó:lō (Sto:lo) and xʷməθkʷəy̓əm (Musqueam) Nations.</p>
+            <p>We must always remember that they were the first peoples displaced from this land and have been its caretakers since time immemorial.</p>
+            <h3><strong>VTU - Renters' Stories</strong></h3>
+          </div>
+        </div>
+      </div>
+	</div>
+	<div class='seagull'><p><%= link_to 'SEAGULL', bonus_path %></p></div>
+</div>
+
+
+

@@ -1,0 +1,50 @@
+<h3><strong>Feature Story:</strong></h3>
+<% @examples.each do |p| %>
+	<div class="card" style="width: 100%;">
+	   <div class="card-body text-center">
+	  	<div class='row'>
+		  	<div class='col-sm-9'>
+			    <h4 class="card-title"><strong><%= p.title %></strong></h4>
+			    <h6 class="card-text"><strong><%= p.body.truncate(144) %><strong></h6>
+			</div>
+		  	<div class='col-sm-3'>
+			    	<h6 class='text-muted'>Topic: <%= p.topic.name %></h6>
+			    	<%= link_to('Read More', post_path(p.id), class: "btn btn-dark") %> 
+			</div>
+		</div>
+	   </div>
+	  </div>
+<% end %>
+
+<div class='row'>
+	<div class='col-sm-3'>
+		<h3><strong><%= check_search %></strong></h3><h6 class="text-muted">Total: <%= @total_posts.length %></h6>
+	</div>
+	<div class='col-sm-9'>
+		<div class='row'>
+			<br/>
+			<div class='col-sm-8'>
+				<%= form_tag posts_path, :method => 'get'  do %>
+  					<%= text_field_tag :term, params[:term], class: "form-control" %>
+			</div>
+			<div class='col-sm-4'>
+  					<%= submit_tag 'Search', :class => "form-control btn-special" %>
+				<% end %>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<div class='row'>
+	<%= render @posts %>		
+</div>
+<% if @total_posts.length > 15 %>
+	<div class='row'>
+		<div class='col-sm-offset-3'>
+		<div class='col-sm-8 card text-center'>
+			<%= will_paginate @posts %>
+		</div>
+		</div>
+	</div>
+<% end %>

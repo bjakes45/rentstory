@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: $backgroundColor;
+  font-size: 14px;
+  font-size: 1.4rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+
+textarea {
+    resize: vertical;
+}
+
+i {
+  width: 26px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a, a:hover, a:active, a:link, a:visited {
+  text-decoration: none;
+}
+
+.control-label {
+  display: none;
+}
+
+.hide {
+  display: none;
+}
+
+.text, .filter-option-inner-inner {
+  color: grey;
+}
+
+.btn-dark {
+  background-color: $navbarColor;
+  color: white;
+}
+
+.btn-dark:hover, .btn-dark:focus, .btn-dark:active, .btn-dark.active {
+  background-color: $navbarColor;
+  color: white;
+}
+
+.footer-btn {
+  margin-top: 20px;
+}
+
+.logo {
+  margin: 5px;  
+}
+
+.bool-header {
+  transform: rotate(-60deg) translate(20px, -20px);
+}
+
+#optional {
+  display: block;
+}
+
+#sidebar {
+  margin-top:20px;
+}
+#mainpage {
+  padding-top:20px;
+}
+.btn-margin {
+  margin: 5px;
+}
+.btn-special {
+  background-color: #9CE9F3;
+  colour: black;
+  margin: 5px;
+}
+.btn-special:a, .btn-special:hover, .btn-special:focus, .btn-special:active, .btn-special.active {
+  text-decoration: none;
+  background-color: #9CE9F3;
+  color: black;
+}
+
+.card {
+  background-color: #9CE9F3;
+  padding:10px;
+  margin:10px;
+  border-radius: 10px;
+  opacity: .9;
+}
+.root_footer_right {
+  position: relative;
+  margin-top: 30px;
+}
+.gull_box {
+  postition: relative;
+}
+
+.seagull {
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  opacity: 0;
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.image-background {
+  background-image: url("daytime.jpg");
+  background-color: #cccccc;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.image-background2 {
+  background-image: url("coalharbour.jpg");
+  background-color: #cccccc;
+  height: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.image-background3 {
+  background-image: url("scienceworld.jpg");
+  background-color: #cccccc;
+  height: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}

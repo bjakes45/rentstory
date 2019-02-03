@@ -1,0 +1,21 @@
+<div class='container'>
+  <div class='row text-center'>
+    <div class='col-sm-offset-4 col-sm-4 col-sm-offset-4'>
+    	<h3><strong>Report a Story</strong></h3>
+    	<p>Reporting: <%= link_to @post.title, post_path(@post) %></p>
+		<%= form_for @report do |form| %>
+		  <%= hidden_field_tag 'post_id', @post.id %>
+		  
+		  <label>Topic</label>
+		  <%= form.select :topic, @rep_topics, {}, :class => 'form-control' %>
+
+		  <label>Post</label>
+		  <%= form.text_area :body, style: 'width:100%; height:150px;', class: 'form-control', required: true %>
+		  <br/>
+		  <%= form.submit 'Report this story', :class => 'btn btn-dark form-control' %>
+		<% end %>
+		<br/>
+		<%= link_to "Back", post_path(@post), class: 'form-control btn btn-dark' %>
+	</div>
+  </div>
+</div>
